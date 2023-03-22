@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  /* background: linear-gradient(45deg, #A770EF, #CF8BF3, #FDB99B); */
+  background: linear-gradient(45deg, #95BDFF, #CF8BF3, #FDB99B);
+  background-size: 400% 400%;
+  animation: bgLinear 25s ease infinite;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@keyframes bgLinear {
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50% {
+    background-position: 100% 50%;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 90vh;
+    /* border: 2px solid #fbfabf; */
+    border-radius: 10px;
+    margin-top: 20px;
+   
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+}
+
+#input {
+    padding: 15px;
+    font-size: 20px;
+}
+
+#input:focus {
+    background-color: #fff;
+  }
+  
+  #when-where {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #city {
+    display: flex;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  #date {
+    color: #FFF;
+    font-size: 24px;
+    padding: 5px;
+  }
+  
+  #now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  #temperature {
+    color: #FFF;
+    font-size: 110px;
+    font-weight: bold;
+    text-shadow: 2px 4px black;
+    margin: 0;
+  }
+  
+  #feelsLike {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #conditions {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: italic;
+  }
+  
+
+  #humidity, #wind, #pressure {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px;
+    
+  }
+
+  #variation {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  #source{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 200px; */
+    
+    
+    
+  }
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, .3);
+}
+
+  .weather-icon {
+    width: 128px;
+    
+  }
+
+  /* АДАПТАЦИЯ */
+
+  @media all and (max-width: 300px) {
+    
+#city {
+  font-size: 30px;
+}
+
+#temperature {
+  font-size: 80px;
+}
+    #humidity, #wind, #pressure {
+      font-size: 15px;
+      font-weight: bolder;
+      padding: 3px;
+      
+    }
+#conditions {
+  font-size: 20px;
+}
+
+  }
