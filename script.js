@@ -14,24 +14,11 @@ function enter(e) {
   }
 }
 
-
-
-
-//ф-ция перевода - нашла в инете. 
-/*function translateDescription(description) {
-    let xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=" + description, false);
-    xhttp.send();
-    let response = JSON.parse(xhttp.responseText);
-    return response[0][0][0];
-}*/
-
-
 async function getInfo (data) { // параметр data нужен для сохранения и переноса информации
 const res = await fetch(`${api.endpoint}weather?q=${data}&lang=ru&units=metric&appID=${api.key}`); // результат это запрос на сторонний сервер и данным который ввел пользователь система , мы выбираем метрическую и ключ. все это копируется заучивать не надо
 const result = await res.json();
-console.log(result);
 displayResult(result); // функция показать результат в нашем приложении
+input.value = ""; // очищает поле ввода после получения данных о погоде
 }
 
 
