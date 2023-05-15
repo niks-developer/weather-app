@@ -4,6 +4,15 @@ const api = {
   key: "5aba262d0a344571d86332b66e88ec9f"
 }
 
+const keyGeo = '7ae6d72ee0af40f284ebb9ea1b5f1bdd';
+async function getIP(){
+    const res = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=${keyGeo}`);
+    const result = await res.json();
+    getInfo(result.city);
+}
+
+getIP();
+
 
 const input = document.querySelector("#input"); // доступ к полю ввода
 input.addEventListener("keypress", enter); // подслушка и запуск функции
