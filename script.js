@@ -11,7 +11,7 @@ async function getIP(){
     getInfo(result.city);
 }
 
-getIP();
+
 
 
 const input = document.querySelector("#input"); // доступ к полю ввода
@@ -97,5 +97,5 @@ function getOurDate() { // описание функции получить Да
     
 }
 
-
+getIP();
 
