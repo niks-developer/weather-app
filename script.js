@@ -4,6 +4,9 @@ const api = {
   key: "5aba262d0a344571d86332b66e88ec9f"
 }
 
+
+//в России работает "криво", в Канаде все ок
+//доступ к api по определению геолокации
 const keyGeo = '7ae6d72ee0af40f284ebb9ea1b5f1bdd';
 async function getIP(){
     const res = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=${keyGeo}`);
@@ -11,7 +14,7 @@ async function getIP(){
     getInfo(result.city);
 }
 
-
+getIP(); //вызов функции по определению геолокации по IP
 
 
 const input = document.querySelector("#input"); // доступ к полю ввода
@@ -97,5 +100,5 @@ function getOurDate() { // описание функции получить Да
     
 }
 
-getIP();
+
 
